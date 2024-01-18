@@ -1,0 +1,53 @@
+{
+  "name": "hockey-game-stats-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/hockey/game-stats-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/hockey/game-stats-api",
+        "main": "apps/hockey/game-stats-api/src/main.ts",
+        "tsConfig": "apps/hockey/game-stats-api/tsconfig.app.json",
+        "assets": ["apps/hockey/game-stats-api/src/assets"],
+        "webpackConfig": "apps/hockey/game-stats-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "hockey-game-stats-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "hockey-game-stats-api:build:development"
+        },
+        "production": {
+          "buildTarget": "hockey-game-stats-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/hockey/game-stats-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
