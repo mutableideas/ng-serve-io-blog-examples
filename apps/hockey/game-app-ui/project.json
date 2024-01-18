@@ -59,10 +59,25 @@
           "buildTarget": "hockey-game-app-ui:build:production"
         },
         "development": {
-          "buildTarget": "hockey-game-app-ui:build:development"
+          "buildTarget": "hockey-game-app-ui:build:development",
+          "proxyConfig": "apps/hockey/game-app-ui/proxy.config.js"
         }
       },
       "defaultConfiguration": "development"
+    },
+    "serve-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "parallel": true,
+        "commands": [
+          {
+            "command": "nx serve hockey-game-app-ui --configuration development"
+          },
+          {
+            "command": "nx serve hockey-game-stats-api"
+          }
+        ]
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
