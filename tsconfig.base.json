@@ -14,7 +14,32 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@org/hockey/core/api/services": [
+        "hockey/core/api/services/src/index.ts"
+      ],
+      "@org/hockey/game-stats/api/application": [
+        "hockey/game-stats/api/application/src/index.ts"
+      ],
+      "@org/hockey/game-stats/api/services": [
+        "hockey/game-stats/api/services/src/index.ts"
+      ],
+      "@org/hockey/game-stats/common": [
+        "hockey/game-stats/common/src/index.ts"
+      ],
+      "@org/hockey/game-stats/ui/data-access": [
+        "hockey/game-stats/ui/data-access/src/index.ts"
+      ],
+      "@org/hockey/game-stats/ui/stats-feature": [
+        "hockey/game-stats/ui/stats-feature/src/index.ts"
+      ],
+      "@org/shared/realtime-communication/server-sent-events/api": [
+        "shared/realtime-communication/server-sent-events/api/src/index.ts"
+      ],
+      "@org/shared/realtime-communication/server-sent-events/ui": [
+        "shared/realtime-communication/server-sent-events/ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

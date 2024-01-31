@@ -1,0 +1,20 @@
+{
+  "name": "shared-realtime-communication-server-sent-events-api",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/realtime-communication/server-sent-events/api/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "shared/realtime-communication/server-sent-events/api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

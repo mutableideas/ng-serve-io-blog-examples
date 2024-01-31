@@ -1,0 +1,20 @@
+{
+  "name": "hockey-game-stats-common",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "hockey/game-stats/common/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "hockey/game-stats/common/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["domain:hockey/game-stats", "type:common", "platform:ng"]
+}

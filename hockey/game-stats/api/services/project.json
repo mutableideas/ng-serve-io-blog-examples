@@ -1,0 +1,20 @@
+{
+  "name": "hockey-game-stats-api-services",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "hockey/game-stats/api/services/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "hockey/game-stats/api/services/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
