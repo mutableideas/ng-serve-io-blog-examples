@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { GameStatType } from '@org/hockey/game-stats/common';
+import { GameStatType } from '@ngserveio/hockey/game-stats/common';
 import { Observable, Subject, filter } from 'rxjs';
 
 @Injectable()
@@ -12,7 +12,11 @@ export class GameStatsService {
     );
   }
 
-  public addStat(gameStat: GameStatType): void {
+  public getForGame(gameId: string): Observable<GameStatType[]> {
+    //return this.
+  }
+
+  public add(gameStat: GameStatType): void {
     this.stat$.next(gameStat);
   }
 }

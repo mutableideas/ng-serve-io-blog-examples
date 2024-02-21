@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
-import { GameStatsService } from './game-stats/game-stats.service';
+import { GameStatsService } from './game-stats.service';
+import { HockeyGameStatsDataAccessModule } from '@ngserveio/hockey/game-stats/api/data-access';
+import { GameService } from './game.service';
 
 @Module({
-  providers: [GameStatsService],
-  exports: [GameStatsService],
+  imports: [HockeyGameStatsDataAccessModule],
+  providers: [GameStatsService, GameService],
+  exports: [GameStatsService, GameService],
 })
 export class HockeyGameStatsApiServicesModule {}

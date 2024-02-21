@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { GAME_STATS_URL } from './injection-tokens';
-import { GameStatType } from '@org/hockey/game-stats/common';
+import { GameStatType } from '@ngserveio/hockey/game-stats/common';
 import { Observable } from 'rxjs';
-import { connectSse } from '@org/shared/realtime-communication/server-sent-events/ui';
+import { connectSse } from '@ngserveio/shared/realtime-communication/server-sent-events/ui';
 
 @Injectable({
   providedIn: 'root'

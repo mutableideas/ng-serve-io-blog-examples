@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { HockeyGameStatsApiApplicationModule } from '@org/hockey/game-stats/api/application';
+import { HockeyGameStatsApiApplicationModule } from '@ngserveio/hockey/game-stats/api/application';
 
 @Module({
   imports: [

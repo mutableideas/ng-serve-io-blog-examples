@@ -24,7 +24,7 @@ export type StatType = Goal | Penalty;
 export type GameStat<T extends StatType> = {
   id: string;
   gameId: string;
-  period: 1 | 2 | 3 | string;
+  period: number | string;
   time: number;
   stat: T,
 };

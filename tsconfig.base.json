@@ -15,28 +15,31 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/hockey/core/api/services": [
+      "@ngserveio/hockey/core/api/services": [
         "hockey/core/api/services/src/index.ts"
       ],
-      "@org/hockey/game-stats/api/application": [
+      "@ngserveio/hockey/game-stats/api/application": [
         "hockey/game-stats/api/application/src/index.ts"
       ],
-      "@org/hockey/game-stats/api/services": [
+      "@ngserveio/hockey/game-stats/api/data-access": [
+        "hockey/game-stats/api/data-access/src/index.ts"
+      ],
+      "@ngserveio/hockey/game-stats/api/services": [
         "hockey/game-stats/api/services/src/index.ts"
       ],
-      "@org/hockey/game-stats/common": [
+      "@ngserveio/hockey/game-stats/common": [
         "hockey/game-stats/common/src/index.ts"
       ],
-      "@org/hockey/game-stats/ui/data-access": [
+      "@ngserveio/hockey/game-stats/ui/data-access": [
         "hockey/game-stats/ui/data-access/src/index.ts"
       ],
-      "@org/hockey/game-stats/ui/stats-feature": [
+      "@ngserveio/hockey/game-stats/ui/stats-feature": [
         "hockey/game-stats/ui/stats-feature/src/index.ts"
       ],
-      "@org/shared/realtime-communication/server-sent-events/api": [
+      "@ngserveio/shared/realtime-communication/server-sent-events/api": [
         "shared/realtime-communication/server-sent-events/api/src/index.ts"
       ],
-      "@org/shared/realtime-communication/server-sent-events/ui": [
+      "@ngserveio/shared/realtime-communication/server-sent-events/ui": [
         "shared/realtime-communication/server-sent-events/ui/src/index.ts"
       ]
     }
