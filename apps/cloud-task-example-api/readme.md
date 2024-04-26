@@ -35,5 +35,3 @@ HANDLER_URL=http://localhost:3000/api/handler
     "id": "some-changing-entity-id"
 }
 ```
-
-### Expected Result
