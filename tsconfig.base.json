@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@org/cloud-task-example-api-application": [
+        "cloud-task-example/api/application/src/index.ts"
+      ],
+      "@org/cloud-task-example/api/services": [
+        "cloud-task-example/api/services/src/index.ts"
+      ],
       "@org/hockey/core/api/services": [
         "hockey/core/api/services/src/index.ts"
       ],
@@ -38,6 +44,15 @@
       ],
       "@org/shared/realtime-communication/server-sent-events/ui": [
         "shared/realtime-communication/server-sent-events/ui/src/index.ts"
+      ],
+      "@shared/google-api-cloud-tasks": [
+        "shared/google/api/cloud-tasks/src/index.ts"
+      ],
+      "@shared/notifications-queue-webhook-api-domain": [
+        "shared/notifications/queue/webhook/api/domain/src/index.ts"
+      ],
+      "@shared/notifications-queue-webhook-api-services": [
+        "shared/notifications/queue/webhook/api/services/src/index.ts"
       ]
     }
   },
