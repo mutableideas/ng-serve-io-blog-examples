@@ -1,0 +1,20 @@
+{
+  "name": "shared-google-api-cloud-tasks",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/google/api/cloud-tasks/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "shared/google/api/cloud-tasks/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

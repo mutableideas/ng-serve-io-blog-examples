@@ -1,0 +1,63 @@
+{
+  "name": "cloud-task-example-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cloud-task-example-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/cloud-task-example-api",
+        "main": "apps/cloud-task-example-api/src/main.ts",
+        "tsConfig": "apps/cloud-task-example-api/tsconfig.app.json",
+        "assets": ["apps/cloud-task-example-api/src/assets"],
+        "webpackConfig": "apps/cloud-task-example-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "parallel": true,
+        "commands": [
+          "npx nx serve-app cloud-task-example-api",
+          "./tools/emulators/cloud-tasks-emulator -host localhost -port 8123 -queue projects/dev/locations/global/queues/test"
+        ]
+      }
+    },
+    "serve-app": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "cloud-task-example-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "cloud-task-example-api:build:development"
+        },
+        "production": {
+          "buildTarget": "cloud-task-example-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/cloud-task-example-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
