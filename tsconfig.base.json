@@ -39,6 +39,15 @@
       "@org/hockey/game-stats/ui/stats-feature": [
         "hockey/game-stats/ui/stats-feature/src/index.ts"
       ],
+      "@org/platform-provider-pattern/domain": [
+        "platform-provider-pattern/domain/src/index.ts"
+      ],
+      "@org/platform-provider-pattern/ui/data-access": [
+        "platform-provider-pattern/ui/data-access/src/index.ts"
+      ],
+      "@org/platform-provider-pattern/ui/jwt-feature": [
+        "platform-provider-pattern/ui/jwt-feature/src/index.ts"
+      ],
       "@org/shared/realtime-communication/server-sent-events/api": [
         "shared/realtime-communication/server-sent-events/api/src/index.ts"
       ],

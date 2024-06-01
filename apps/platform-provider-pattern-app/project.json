@@ -1,0 +1,85 @@
+{
+  "name": "platform-provider-pattern-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "org",
+  "sourceRoot": "apps/platform-provider-pattern-app/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/platform-provider-pattern-app",
+        "index": "apps/platform-provider-pattern-app/src/index.html",
+        "browser": "apps/platform-provider-pattern-app/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/platform-provider-pattern-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/platform-provider-pattern-app/src/favicon.ico",
+          "apps/platform-provider-pattern-app/src/assets"
+        ],
+        "styles": ["apps/platform-provider-pattern-app/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/platform-provider-pattern-app/src/main.server.ts",
+        "prerender": false,
+        "ssr": {
+          "entry": "apps/platform-provider-pattern-app/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "platform-provider-pattern-app:build:production"
+        },
+        "development": {
+          "buildTarget": "platform-provider-pattern-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "platform-provider-pattern-app:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/platform-provider-pattern-app/jest.config.ts"
+      }
+    }
+  }
+}
