@@ -1,0 +1,21 @@
+{
+  "name": "platform-provider-pattern-ui-jwt-feature",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "platform-provider-pattern/ui/jwt-feature/src",
+  "prefix": "org",
+  "tags": ["domain:platform-provider-pattern", "platform:ng", "lib:ng-feature"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "platform-provider-pattern/ui/jwt-feature/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

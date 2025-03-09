@@ -1,0 +1,6 @@
+<p>Name: {{ claims?.name || 'No Name provided' }}</p>
+<p>Email: {{ claims?.email || 'No Email Provided' }}</p>
+
+<p *orgClaims="roles.ADMIN">I Am an Admin</p>
+<p *orgClaims="roles.EDITOR">I Am an Editor</p>
+<p *orgClaims="roles.VIEWER">I Am an Viewer</p>

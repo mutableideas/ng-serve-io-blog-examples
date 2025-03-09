@@ -15,7 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngserveio/hockey/core/api/services": [
+      "@org/cloud-task-example-api-application": [
+        "cloud-task-example/api/application/src/index.ts"
+      ],
+      "@org/cloud-task-example/api/services": [
+        "cloud-task-example/api/services/src/index.ts"
+      ],
+      "@org/hockey/core/api/services": [
         "hockey/core/api/services/src/index.ts"
       ],
       "@ngserveio/hockey/game-stats/api/application": [
@@ -36,11 +42,29 @@
       "@ngserveio/hockey/game-stats/ui/stats-feature": [
         "hockey/game-stats/ui/stats-feature/src/index.ts"
       ],
-      "@ngserveio/shared/realtime-communication/server-sent-events/api": [
+      "@org/platform-provider-pattern/domain": [
+        "platform-provider-pattern/domain/src/index.ts"
+      ],
+      "@org/platform-provider-pattern/ui/data-access": [
+        "platform-provider-pattern/ui/data-access/src/index.ts"
+      ],
+      "@org/platform-provider-pattern/ui/jwt-feature": [
+        "platform-provider-pattern/ui/jwt-feature/src/index.ts"
+      ],
+      "@org/shared/realtime-communication/server-sent-events/api": [
         "shared/realtime-communication/server-sent-events/api/src/index.ts"
       ],
       "@ngserveio/shared/realtime-communication/server-sent-events/ui": [
         "shared/realtime-communication/server-sent-events/ui/src/index.ts"
+      ],
+      "@shared/google-api-cloud-tasks": [
+        "shared/google/api/cloud-tasks/src/index.ts"
+      ],
+      "@shared/notifications-queue-webhook-api-domain": [
+        "shared/notifications/queue/webhook/api/domain/src/index.ts"
+      ],
+      "@shared/notifications-queue-webhook-api-services": [
+        "shared/notifications/queue/webhook/api/services/src/index.ts"
       ]
     }
   },
